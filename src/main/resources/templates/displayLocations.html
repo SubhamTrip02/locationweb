@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+<body>
+<h3 style="background-color: aquamarine">All Locations</h3>
+<table cellpadding="40px">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Type</th>
+    </tr>
+    <tr th:each="loc :${locationAll}">
+        <td th:text="${loc.id}"></td>
+        <td th:text="${loc.name}"></td>
+        <td th:text="${loc.code}"></td>
+        <td th:text="${loc.type}"></td>
+        <td><a href="/deleteLocation/{id}(id=${loc.id})">Delete This Record ?</a></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

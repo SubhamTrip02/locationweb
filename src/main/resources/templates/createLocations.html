@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>CreateLocation</title>
+</head>
+<body>
+
+<form action="saveLoc" method="post">
+<pre>
+Id: <input type="text" name="id"/>
+Code: <input type="text" name="code"/>
+Name: <input type="text" name="name"/>
+Type: Urban <input type="radio" name="type" value="URBAN"/>
+	Rural <input type="radio" name="type" value="RURAL"/>
+<input type="submit" value="save"/>
+</pre>
+</form>
+<h4 th:text=${message}> </h4>
+
+<a href="displayLocations">View All</a>
+
+
+
+</body>
+</html>
