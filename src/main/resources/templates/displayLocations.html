@@ -19,7 +19,8 @@
         <td th:text="${loc.name}"></td>
         <td th:text="${loc.code}"></td>
         <td th:text="${loc.type}"></td>
-        <td><a href="/deleteLocation/{id}(id=${loc.id})">Delete This Record ?</a></td>
+        <td><a th:href="@{'/deleteLocation/'+${loc.id}}">Delete This Record ?</a></td>
+        <td><a th:href="">View This</td>
     </tr>
 </table>
 
